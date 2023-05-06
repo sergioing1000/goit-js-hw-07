@@ -8,14 +8,14 @@ let i;
 const upperHead = document.querySelector("head");
 const stylesFile = document.createElement("link");
 stylesFile.rel = "stylesheet";
-stylesFile.href = "./node_modules/basiclightbox/dist/basicLightbox.min.css";
+stylesFile.href = "/node_modules/basiclightbox/dist/basicLightbox.min.css";
 upperHead.append(stylesFile);
 
 // ⬇️⬇️⬇️Following lines include a js script at the end of the body. According the recomendation of basicLightbox repository.
 
 const bottomBody = document.querySelector("body");
 const jsLink = document.createElement("script");
-jsLink.src = "./node_modules/basiclightbox/dist/basicLightbox.min.js";
+jsLink.src = "/node_modules/basiclightbox/dist/basicLightbox.min.js";
 bottomBody.append(jsLink);
 
 // ⬇️⬇️⬇️ Following lines create the gallery using a for each loop in the imported array coming from gallery-items.js file' On top of that these lines add classes to include styles alreedy defined in the styles.css file.
