@@ -64,7 +64,6 @@ anchors.forEach((elemento,  i=0) => {
 
     imageOnModal.show();
 
-
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') {
         // Your event handling code here
