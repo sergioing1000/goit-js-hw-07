@@ -1,6 +1,7 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
+let i;
 
 // ⬇️⬇️⬇️Following lines include a link in the head for the styles files CSS. According the recomendation of basicLightbox repository.
 
@@ -44,14 +45,34 @@ galleryItems.forEach(array_element => {
 
 const anchors = document.querySelectorAll(".gallery__link");
 
-console.log(anchors);
 
-anchors.forEach((elemento) => {
+anchors.forEach((elemento,  i=0) => {
 
   elemento.addEventListener("click", function (event) {
-
     event.preventDefault();
-    console.log("OJO dio click");
-  });
+   
+    // console.log(`El valor de i es: ${i} y el link de la imagen es ${galleryItems[i - 1].original}`);
+    
+    let imageOnModal=basicLightbox.create(
+      `
+	  	<img width="1400" height="900" src=${galleryItems[i - 1].original}>
+  	  `,
+      {
+        closable:true
+      }
+    );
 
+    imageOnModal.show();
+
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        // Your event handling code here
+        
+        imageOnModal.close();
+      }
+    });
+
+  });
+  i++;
 });
