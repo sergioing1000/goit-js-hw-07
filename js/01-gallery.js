@@ -42,17 +42,16 @@ galleryItems.forEach(array_element => {
 
 // ⬇️⬇️⬇️ Following lines will include basiclightbox methods.
 
-const anchor = document.querySelector(".gallery__image");
+const anchors = document.querySelectorAll(".gallery__link");
 
-console.log(anchor);
+console.log(anchors);
 
-anchor.addEventListener("click", (event) => {
+anchors.forEach((elemento) => {
 
-  event.preventDefault();
-  console.log("OJO dio click");
+  elemento.addEventListener("click", function (event) {
 
-})
+    event.preventDefault();
+    console.log("OJO dio click");
+  });
 
-
-
-
+});
