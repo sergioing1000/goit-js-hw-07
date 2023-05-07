@@ -1,7 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-
 // ⬇️⬇️⬇️Following lines include a link in the head for the styles files CSS. According the recomendation of simpleLightbox repository.
 
 const upperHead = document.querySelector("head");
