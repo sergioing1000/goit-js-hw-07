@@ -80,4 +80,4 @@ galleryItems.forEach(array_element => {
 //     i++;
 //   });
   
-let lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+let lightbox = new SimpleLightbox('.gallery a');
