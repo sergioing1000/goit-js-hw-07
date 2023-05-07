@@ -8,6 +8,7 @@ let i;
 const upperHead = document.querySelector("head");
 const stylesFile = document.createElement("link");
 stylesFile.rel = "stylesheet";
+
 stylesFile.href = "https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css";
 upperHead.append(stylesFile);
 
