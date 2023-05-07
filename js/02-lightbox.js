@@ -80,24 +80,4 @@ galleryItems.forEach(array_element => {
 //     i++;
 //   });
   
-  var lightbox = new SimpleLightbox('.gallery a');
-  
-  function beep(duration, frequency) {
-    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    const oscillator = audioContext.createOscillator();
-    const gainNode = audioContext.createGain();
-    
-  oscillator.type = 'square';
-  oscillator.frequency.value = frequency;
-  oscillator.connect(gainNode);
-  gainNode.connect(audioContext.destination);
-  
-  oscillator.start();
-  gainNode.gain.setValueAtTime(1, audioContext.currentTime);
-  gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + duration / 1000);
-
-  setTimeout(function() {
-    oscillator.stop();
-    audioContext.close();
-  }, duration);
-}
+let lightbox = new SimpleLightbox('.gallery a', { /* options */ });
